@@ -559,7 +559,8 @@ namespace SoEasyPlatform.Apis
                 {
                     CodeTableViewModel code = new CodeTableViewModel()
                     {
-                        ClassName = PubMehtod.GetCsharpName(item.Name),
+                        //ClassName = PubMehtod.GetCsharpName(item.Name),
+                        ClassName = item.Name,
                         TableName = item.Name,
                         DbId = dbid,
                         Description = item.Description,

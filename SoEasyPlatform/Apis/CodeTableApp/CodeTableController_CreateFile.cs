@@ -120,7 +120,7 @@ namespace SoEasyPlatform.Apis
                             IsIdentity = column.IsIdentity,
                             IsPrimaryKey = column.IsPrimaryKey,
                             PropertyName = GetPropertyName(column.ClassProperName),
-                            Type = IsSpecialType(column) ? GetType(column) : codeType.CSharepType,
+                            Type = IsSpecialType(column) ? GetType(column) : codeType.CSharepType.Replace("Guid?", "string").Replace("Guid", "string"),
                             IsNullable = column.Required == false,
                             DbType = dbType.Name,
                             Length = dbType.Length,
